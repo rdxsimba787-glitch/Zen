@@ -1,0 +1,29 @@
+{
+  "name": "minecraft-server-site",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --port=3000 --host=0.0.0.0",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "tsc --noEmit",
+    "clean": "rm -rf dist",
+    "icons": "capacitor-assets generate --android",
+    "android:init": "npm run build && cap add android && cap sync android",
+    "android:sync": "npm run build && cap sync android",
+    "android:open": "cap open android"
+  },
+  "dependencies": {
+    "@capacitor/android": "^7.4.0",
+    "@capacitor/core": "^7.4.0",
+    "@capacitor/splash-screen": "^7.0.0"
+  },
+  "devDependencies": {
+    "@capacitor/assets": "^3.0.5",
+    "@capacitor/cli": "^7.4.0",
+    "@types/node": "^22.14.0",
+    "typescript": "^5.8.3",
+    "vite": "^8.3.0"
+  }
+}
